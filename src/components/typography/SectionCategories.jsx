@@ -5,7 +5,7 @@ const SectionCategories = ({ children, style }) => {
   const defaultStyle = {
     fontFamily: '"Karla", system-ui',
     fontWeight: 800,
-    fontSize: "16px",
+    fontSize: "1rem",
     color: colors.highlight2, // Default color
   };
 

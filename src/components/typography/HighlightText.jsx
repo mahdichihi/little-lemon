@@ -5,7 +5,7 @@ const HighlightText = ({ children, style }) => {
   const defaultStyle = {
     fontFamily: '"Karla", system-ui',
     fontWeight: 500,
-    fontSize: "16px",
+    fontSize: "1rem",
     color: colors.highlight2, // Default color
   };
 

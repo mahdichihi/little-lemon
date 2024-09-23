@@ -5,7 +5,7 @@ const SubTitle = ({ children, style }) => {
   const defaultStyle = {
     fontFamily: '"Markazi Text", serif',
     fontWeight: 400,
-    fontSize: "40px",
+    fontSize: "2.5rem",
     color: colors.highlight2, // Default color
   };
 

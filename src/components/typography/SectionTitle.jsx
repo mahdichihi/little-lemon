@@ -5,7 +5,7 @@ const SectionTitle = ({ children, style }) => {
   const defaultStyle = {
     fontFamily: '"Karla", system-ui',
     fontWeight: 800,
-    fontSize: "20px",
+    fontSize: "1.25rem",
     color: colors.highlight2, // Default color
     textTransform: "uppercase",
   };

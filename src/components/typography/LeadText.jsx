@@ -5,8 +5,8 @@ const LeadText = ({ children, style }) => {
   const defaultStyle = {
     fontFamily: '"Karla", system-ui',
     fontWeight: 500,
-    fontSize: "18px",
-    lineHeight: "28px",
+    fontSize: "1.125rem",
+    lineHeight: "1.75rem",
     color: colors.highlight2, // Default color
   };
 

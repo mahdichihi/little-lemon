@@ -5,8 +5,8 @@ const ParagraphText = ({ children, style }) => {
   const defaultStyle = {
     fontFamily: '"Karla", system-ui',
     fontWeight: 400,
-    fontSize: "16px",
-    lineHeight: "22px",
+    fontSize: "1rem",
+    lineHeight: "1.375rem",
     color: colors.highlight2, // Default color
   };
 

@@ -5,7 +5,7 @@ const CardTitle = ({ children, style }) => {
   const defaultStyle = {
     fontFamily: '"Karla", system-ui',
     fontWeight: 700,
-    fontSize: "18px",
+    fontSize: "1.125rem",
     color: colors.highlight2, // Default color
   };
 

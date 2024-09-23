@@ -1,6 +1,26 @@
+/* Reset styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style-type: none;
+}
+
+/* Define CSS variables for colors */
+:root {
+  --primary1: #495e57;
+  --primary2: #f4ce14;
+
+  --secondary1: #ee9972;
+  --secondary2: #fbdabb;
+
+  --highlight1: #edefee;
+  --highlight2: #333333;
+
+  font-size: 16px; /* base font size */
+}
+
+/* Example usage of colors in styles */
+body {
+  background-color: white;
 }

@@ -5,7 +5,7 @@ const DisplayTitle = ({ children, style }) => {
   const defaultStyle = {
     fontFamily: '"Markazi Text", serif',
     fontWeight: 500,
-    fontSize: "64px",
+    fontSize: "4rem",
     color: colors.highlight2, // Default color
   };
 
