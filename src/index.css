@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   list-style-type: none;
+  transition: all 0.3s ease;
 }
 
 /* Define CSS variables for colors */
