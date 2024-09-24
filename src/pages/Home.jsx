@@ -1,0 +1,26 @@
+import React from "react";
+import Hero from "../sections/hero/Hero";
+import Highlights from "../sections/highlights/Highlights";
+import Testimonials from "../sections/testimonials/Testimonials";
+import About from "../sections/about/About";
+
+const Home = () => {
+  return (
+    <>
+      <Hero
+        text={
+          "We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist."
+        }
+        showButton
+        onClick={() => {
+          console.log("clicked!");
+        }}
+      />
+      <Highlights />
+      <Testimonials />
+      <About />
+    </>
+  );
+};
+
+export default Home;

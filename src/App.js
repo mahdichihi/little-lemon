@@ -1,14 +1,10 @@
 import Layout from "./components/layout/Layout";
-import DisplayTitle from "./components/typography/DisplayTitle";
-import LeadText from "./components/typography/LeadText";
-import SubTitle from "./components/typography/SubTitle";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <Layout>
-      <DisplayTitle>APP</DisplayTitle>
-      <SubTitle>APP</SubTitle>
-      <LeadText>APP</LeadText>
+      <Home />
     </Layout>
   );
 }
