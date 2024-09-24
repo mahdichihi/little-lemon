@@ -8,7 +8,7 @@ import IMG2 from "../../assets/images/marioAndAdrianB.jpg";
 
 const About = () => {
   return (
-    <div className={styles.wrapper}>
+    <section className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.contentContainer}>
           <DisplayTitle>Little Lemon</DisplayTitle>
@@ -29,7 +29,7 @@ const About = () => {
           <img src={IMG2} loading="lazy" alt="Mario and Adrian" />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

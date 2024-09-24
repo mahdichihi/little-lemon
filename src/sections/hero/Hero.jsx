@@ -9,7 +9,7 @@ import IMG from "../../assets/images/restauranFood.jpg";
 
 const Hero = ({ text, showButton, onClick }) => {
   return (
-    <div className={styles.wrapper}>
+    <section className={styles.wrapper}>
       <div className={styles.overlay} />
       <div className={styles.container}>
         <div className={styles.contentContainer}>
@@ -33,7 +33,7 @@ const Hero = ({ text, showButton, onClick }) => {
         </div>
         <img src={IMG} alt="restaurant food" className={styles.img} />
       </div>
-    </div>
+    </section>
   );
 };
 
