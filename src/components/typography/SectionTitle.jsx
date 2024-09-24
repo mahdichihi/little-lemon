@@ -1,7 +1,7 @@
 import React from "react";
 import { colors } from "../../theme/colors"; // Adjust the import path as necessary
 
-const SectionTitle = ({ children, style }) => {
+const SectionTitle = ({ children, style, ...restProps }) => {
   const defaultStyle = {
     fontFamily: '"Karla", system-ui',
     fontWeight: 800,
@@ -10,7 +10,11 @@ const SectionTitle = ({ children, style }) => {
     textTransform: "uppercase",
   };
 
-  return <p style={{ ...defaultStyle, ...style }}>{children}</p>;
+  return (
+    <p style={{ ...defaultStyle, ...style }} {...restProps}>
+      {children}
+    </p>
+  );
 };
 
 export default SectionTitle;

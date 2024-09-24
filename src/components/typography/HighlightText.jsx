@@ -1,7 +1,7 @@
 import React from "react";
 import { colors } from "../../theme/colors"; // Adjust the import path as necessary
 
-const HighlightText = ({ children, style }) => {
+const HighlightText = ({ children, style, ...restProps }) => {
   const defaultStyle = {
     fontFamily: '"Karla", system-ui',
     fontWeight: 500,
@@ -9,7 +9,11 @@ const HighlightText = ({ children, style }) => {
     color: colors.highlight2, // Default color
   };
 
-  return <p style={{ ...defaultStyle, ...style }}>{children}</p>;
+  return (
+    <p style={{ ...defaultStyle, ...style }} {...restProps}>
+      {children}
+    </p>
+  );
 };
 
 export default HighlightText;
