@@ -16,7 +16,7 @@ const Hero = ({ text, showButton, onClick }) => {
           <DisplayTitle style={{ color: colors.primary2 }}>
             Little Lemon
           </DisplayTitle>
-          <SubTitle style={{ color: colors.highlight1 }}>Little Lemon</SubTitle>
+          <SubTitle style={{ color: colors.highlight1 }}>Chicago</SubTitle>
           <div className={styles.leadText}>
             <LeadText style={{ color: colors.highlight1 }}>{text}</LeadText>
           </div>
