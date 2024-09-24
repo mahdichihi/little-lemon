@@ -1,0 +1,45 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+.container {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+}
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  order: 2;
+  justify-content: center;
+}
+.titleContainer {
+  order: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    justify-content: center;
+    align-items: center;
+    padding: 6.4rem 2rem;
+  }
+  .container {
+    max-width: 860px;
+    justify-content: space-between;
+    position: relative;
+    gap: 2.43rem;
+  }
+  .cardsContainer {
+    order: 3;
+  }
+}
+@media screen and (min-width: 992px) {
+  .cardsContainer {
+    flex-wrap: nowrap;
+
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,46 @@
+.wrapper {
+  max-width: 12.125rem;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  margin-top: 1.58rem;
+}
+.imgContainer {
+  position: absolute;
+  align-self: center;
+  top: -1.56rem;
+}
+.img {
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.rating {
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.contentContainer {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding: 3.75rem 1rem 1rem;
+  background-color: var(--highlight1);
+
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
