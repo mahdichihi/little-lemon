@@ -4,7 +4,7 @@ import Highlights from "../sections/highlights/Highlights";
 import Testimonials from "../sections/testimonials/Testimonials";
 import About from "../sections/about/About";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <>
       <Hero
@@ -23,4 +23,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
