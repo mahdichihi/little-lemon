@@ -6,7 +6,7 @@ import SectionTitle from "../typography/SectionTitle";
 
 const Footer = () => {
   return (
-    <nav className={styles.footer}>
+    <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.imgContainer}>
           <img src={BigLogo} alt="logo" />
@@ -76,7 +76,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-    </nav>
+    </footer>
   );
 };
 
