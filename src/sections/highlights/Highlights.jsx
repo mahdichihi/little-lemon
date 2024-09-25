@@ -7,7 +7,7 @@ import { dishes } from "../../mocks/dishes";
 
 const Highlights = () => {
   return (
-    <section className={styles.wrapper}>
+    <section id="menu" className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.titleContainer}>
           <DisplayTitle>This weeks specials!</DisplayTitle>

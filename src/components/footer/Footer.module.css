@@ -29,6 +29,10 @@
   justify-content: center;
 }
 
+.list > li > a {
+  color: var(--highlight2); /* Styles for a inside li of the last .list */
+}
+
 @media screen and (min-width: 768px) {
   .list {
     gap: 2rem;

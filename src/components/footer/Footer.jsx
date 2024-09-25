@@ -3,6 +3,11 @@ import styles from "./Footer.module.css";
 import BigLogo from "../../assets/images/bigLogo.png";
 import SectionCategories from "../typography/SectionCategories";
 import SectionTitle from "../typography/SectionTitle";
+import { NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+import { FaFacebookF } from "react-icons/fa";
+import { FiInstagram } from "react-icons/fi";
+import { IoLogoTwitter } from "react-icons/io";
 
 const Footer = () => {
   return (
@@ -18,22 +23,34 @@ const Footer = () => {
 
           <ul className={styles.list}>
             <li>
-              <SectionCategories>home</SectionCategories>
+              <NavLink end to="/">
+                <SectionCategories>home</SectionCategories>
+              </NavLink>
             </li>
             <li>
-              <SectionCategories>about</SectionCategories>
+              <HashLink to="/#about" smooth>
+                <SectionCategories>about</SectionCategories>
+              </HashLink>
             </li>
             <li>
-              <SectionCategories>menu</SectionCategories>
+              <HashLink to="/#menu" smooth>
+                <SectionCategories>menu</SectionCategories>
+              </HashLink>
             </li>
             <li>
-              <SectionCategories>reservations</SectionCategories>
+              <NavLink to="/booking">
+                <SectionCategories>reservations</SectionCategories>
+              </NavLink>
             </li>
             <li>
-              <SectionCategories>order online</SectionCategories>
+              <HashLink to="#" smooth>
+                <SectionCategories>order online</SectionCategories>
+              </HashLink>
             </li>
             <li>
-              <SectionCategories>login</SectionCategories>
+              <HashLink to="#" smooth>
+                <SectionCategories>login</SectionCategories>
+              </HashLink>
             </li>
           </ul>
         </div>
@@ -59,19 +76,19 @@ const Footer = () => {
           </div>
           <ul className={styles.list}>
             <li>
-              <SectionCategories>facebook</SectionCategories>
+              <a href="https://facebook.com" target="_blank" rel="noreferrer">
+                <FaFacebookF />
+              </a>
             </li>
             <li>
-              <SectionCategories>instagram</SectionCategories>
+              <a href="https://instagram.com" target="_blank" rel="noreferrer">
+                <FiInstagram />
+              </a>
             </li>
             <li>
-              <SectionCategories>twitter</SectionCategories>
-            </li>
-            <li>
-              <SectionCategories>youtube</SectionCategories>
-            </li>
-            <li>
-              <SectionCategories>linkedIn</SectionCategories>
+              <a href="https://twitter.com" target="_blank" rel="noreferrer">
+                <IoLogoTwitter />
+              </a>
             </li>
           </ul>
         </div>
