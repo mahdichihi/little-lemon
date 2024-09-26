@@ -3,8 +3,10 @@ import Hero from "../sections/hero/Hero";
 import Highlights from "../sections/highlights/Highlights";
 import Testimonials from "../sections/testimonials/Testimonials";
 import About from "../sections/about/About";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Hero
@@ -13,7 +15,7 @@ const HomePage = () => {
         }
         showButton
         onClick={() => {
-          console.log("clicked!");
+          navigate("/booking");
         }}
       />
       <Highlights />

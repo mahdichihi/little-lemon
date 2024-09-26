@@ -1,5 +1,5 @@
 // timeReducer.test.js
-import { initializeTimes, timeReducer } from "./timeReducer";
+import { initializeTimes, timeReducer } from "./utils";
 
 describe("Time Reducer Functions", () => {
   test("initializeTimes should return the correct initial available times", () => {
