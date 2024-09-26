@@ -7,7 +7,7 @@ import { colors } from "../../theme/colors";
 import Button from "../../components/button/Button";
 import IMG from "../../assets/images/restauranFood.jpg";
 
-const Hero = ({ text, showButton, onClick }) => {
+const Hero = ({ text, image = IMG, showButton, onClick }) => {
   return (
     <section className={styles.wrapper}>
       <div className={styles.overlay} />
@@ -31,7 +31,7 @@ const Hero = ({ text, showButton, onClick }) => {
             </div>
           )}
         </div>
-        <img src={IMG} alt="restaurant food" className={styles.img} />
+        <img src={image} alt="restaurant food" className={styles.img} />
       </div>
     </section>
   );

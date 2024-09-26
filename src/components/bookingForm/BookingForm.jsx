@@ -4,8 +4,9 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import styles from "./BookingForm.module.css";
 import { submitAPI } from "../../utils/utils";
+import SectionCategories from "../typography/SectionCategories";
 
-const BookingForm = ({ availableTimes, dispatch, ...props }) => {
+const BookingForm = ({ availableTimes, dispatch }) => {
   const navigate = useNavigate();
   const today = new Date();
   today.setHours(0, 0, 0, 0);
@@ -48,73 +49,77 @@ const BookingForm = ({ availableTimes, dispatch, ...props }) => {
   }, [formik.values.date, dispatch]);
 
   return (
-    <div {...props} className={styles.container}>
-      <div className={styles.top}>
-        <h1>Book Now</h1>
-      </div>
-      <form onSubmit={formik.handleSubmit} className={styles.form} noValidate>
-        <label htmlFor="res-date">Choose date</label>
-        <input
-          type="date"
-          data-testid="res-date"
-          id="res-date"
-          {...formik.getFieldProps("date")}
-        />
-        <span data-testid="res-date-error" className={styles.formMessageError}>
-          {formik.touched.date && formik.errors.date}
-        </span>
+    <form onSubmit={formik.handleSubmit} className={styles.form} noValidate>
+      <label htmlFor="res-date">
+        <SectionCategories>Choose date</SectionCategories>
+      </label>
+      <input
+        type="date"
+        data-testid="res-date"
+        id="res-date"
+        {...formik.getFieldProps("date")}
+      />
+      <p data-testid="res-date-error" className={styles.formMessageError}>
+        {formik.touched.date && formik.errors.date}
+      </p>
 
-        <label htmlFor="res-time">Choose time</label>
-        <select
-          data-testid="res-time"
-          id="res-time"
-          {...formik.getFieldProps("time")}
-        >
-          {availableTimes.times.map((time) => (
-            <option key={time} value={time}>
-              {time}
-            </option>
-          ))}
-        </select>
-        <span data-testid="res-time-error" className={styles.formMessageError}>
-          {formik.touched.time && formik.errors.time}
-        </span>
+      <label htmlFor="res-time">
+        <SectionCategories>Choose time</SectionCategories>
+      </label>
+      <select
+        data-testid="res-time"
+        id="res-time"
+        {...formik.getFieldProps("time")}
+      >
+        {availableTimes.times.map((time) => (
+          <option key={time} value={time}>
+            {time}
+          </option>
+        ))}
+      </select>
+      <p data-testid="res-time-error" className={styles.formMessageError}>
+        {formik.touched.time && formik.errors.time}
+      </p>
 
-        <label htmlFor="guests">Number of guests</label>
-        <input
-          data-testid="guests"
-          type="number"
-          placeholder="1"
-          min="1"
-          max="10"
-          id="guests"
-          {...formik.getFieldProps("guests")}
-        />
-        <span data-testid="guests-error" className={styles.formMessageError}>
-          {formik.touched.guests && formik.errors.guests}
-        </span>
+      <label htmlFor="guests">
+        <SectionCategories>Number of guests</SectionCategories>
+      </label>
+      <input
+        data-testid="guests"
+        type="number"
+        placeholder="1"
+        min="1"
+        max="10"
+        id="guests"
+        {...formik.getFieldProps("guests")}
+      />
+      <p data-testid="guests-error" className={styles.formMessageError}>
+        {formik.touched.guests && formik.errors.guests}
+      </p>
 
-        <label htmlFor="occasion">Occasion</label>
-        <select
-          data-testid="occasion"
-          id="occasion"
-          {...formik.getFieldProps("occasion")}
-        >
-          <option value="birthday">Birthday</option>
-          <option value="engagement">Engagement</option>
-          <option value="anniversary">Anniversary</option>
-        </select>
-        <span data-testid="occasion-error" className={styles.formMessageError}>
-          {formik.touched.occasion && formik.errors.occasion}
-        </span>
+      <label htmlFor="occasion">
+        <SectionCategories>Occasion</SectionCategories>
+      </label>
 
-        <input
-          data-testid="submit-btn"
-          type="submit"
-          value="Make Your reservation"
-        />
-      </form>
-    </div>
+      <select
+        data-testid="occasion"
+        id="occasion"
+        {...formik.getFieldProps("occasion")}
+      >
+        <option value="birthday">Birthday</option>
+        <option value="engagement">Engagement</option>
+        <option value="anniversary">Anniversary</option>
+      </select>
+      <p data-testid="occasion-error" className={styles.formMessageError}>
+        {formik.touched.occasion && formik.errors.occasion}
+      </p>
+
+      <input
+        data-testid="submit-btn"
+        type="submit"
+        value="Make your reservation"
+      />
+    </form>
   );
 };
 

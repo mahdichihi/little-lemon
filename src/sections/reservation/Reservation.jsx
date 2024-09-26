@@ -1,36 +1,14 @@
 import React from "react";
 import BookingForm from "../../components/bookingForm/BookingForm";
+import styles from "./Reservation.module.css";
 
-const Reservation = ({
-  date,
-  today,
-  setDate,
-  time,
-  setTime,
-  guests,
-  setGuests,
-  occasion,
-  setOccasion,
-  availableTimes,
-  onSubmit,
-}) => {
+const Reservation = ({ availableTimes, dispatch }) => {
   return (
-    <div>
-      <h2>Reservation</h2>
-      <BookingForm
-        date={date}
-        today={today}
-        setDate={setDate}
-        time={time}
-        setTime={setTime}
-        guests={guests}
-        setGuests={setGuests}
-        occasion={occasion}
-        setOccasion={setOccasion}
-        availableTimes={availableTimes}
-        onSubmit={onSubmit}
-      />
-    </div>
+    <section className={styles.wrapper}>
+      <div className={styles.container}>
+        <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
+      </div>
+    </section>
   );
 };
 
